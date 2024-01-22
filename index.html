@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Goldsmiths Corporation</title>
+    <title>Goldsmiths Corporation</title> 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background-color: #0b2a0d; 
-            text-align: center;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        } 
-        body { /* #0b2a0d for background, #ffe23c for text */
-            background-color: #0b2a0d;
+            background-color: #0b2a0d; /* #0b2a0d for background, #ffe23c for logo */
+            position: relative; /* Set positioning context */
+            height: 100vh; /* Full viewport height */
+        }
+        .logo-section {
+            position: absolute; /* Absolute positioning */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for the size of the element */
             text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        } 
+        }
         img { 
-            height: 35vh; /* % of the viewport height */
-            width: auto;  /* Maintain aspect ratio */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            height: 35vh;
+            width: auto;
+            transition: transform 0.3s ease;
         }
         img:hover { 
-            transform: scale(1.05); /* Slightly increase the size */
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <a href="mailto:martin@goldsmiths.cc">
-        <img src="logo.png" alt="martin@goldsmiths.cc">
-    </a>
+    <div class="logo-section">
+        <a href="mailto:martin@goldsmiths.cc">
+            <img src="logo.png" alt="Goldsmiths Corporation Logo">
+        </a>
+    </div>
 </body>
 </html>
-
