@@ -2,27 +2,44 @@
 <html>
 <head>
     <title>Goldsmiths Corporation</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background-color: #0b2a0d; /* This sets the background to gray */
-            text-align: center; /* This centers the content */
+            background-color: #0b2a0d; 
+            text-align: center;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         } 
- 
+        body { /* #0b2a0d for background, #ffe23c for text */
+            background-color: #0b2a0d;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        } 
         img { 
-            height: 35vh; /* 20% of the viewport height */
+            height: 35vh; /* % of the viewport height */
             width: auto;  /* Maintain aspect ratio */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        img:hover { 
+            transform: scale(1.05); /* Slightly increase the size */
         }
     </style>
 </head>
 <body>
-    <!-- Your SVG logo will be placed here -->
-    <img src="logo.png" alt="GSC">
+    <a href="mailto:martin@goldsmiths.cc">
+        <img src="logo.png" alt="martin@goldsmiths.cc">
+    </a>
 </body>
 </html>
 
