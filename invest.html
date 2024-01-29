@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goldsmiths Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #7f7f7f; /* Grey background */
+            font-size: 1.1vw
+        }
+        header {
+            height: 12vh;
+            width: 100%;
+            background-color: #0b2a0d;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            font-size: 1.25vw
+        }
+
+        .logo {
+            height: 10vh; /* Adjust as needed */
+            padding: 1vh;
+            width: auto;
+            float: left;
+        }
+        .nav-links {
+            
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Courier New', monospace;
+        }
+        .nav-links li {
+            padding: 2vh;
+            display: inline;
+            
+        }
+        .nav-links a {
+            color:  #DEB13C; 
+            text-decoration: none;
+            
+        }
+        .logo-bloc {
+            display: flex;
+            align-items: center; /* This will vertically center the items */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Courier New', monospace;
+        }
+        .logo-bloc li {
+            display: inline;
+            
+        }
+        .logo-bloc a {
+            color:  #DEB13C; 
+            text-decoration: none;
+            
+        }
+        main {
+            max-width: 60vw; /* Limit the width for readability */
+            margin: 20vh auto 10vh auto;
+            padding: 2vw; /* Add some padding inside the main content */
+            background-color: #acacac; /* White background for the document section */
+            font-family: 'Roboto Slab', serif;
+            color: #000; /* Dark text for readability */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            text-align: justify;
+        }
+        main h1, main h2, main h3, main h4, main h5, main h6 {
+            text-align: center;
+        }
+        .label {
+            /* Styles for the label */
+            font-weight: bold; /* Optional: to highlight the label */
+        }
+
+        .indented-text {
+            margin-left: 40px; /* Adjust as needed for the desired indentation */
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            width: 50%; /* Or any other percentage or fixed width */
+            margin: auto;
+        }
+
+        .flex-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-item span {
+            flex: 1; /* Ensures labels take equal space */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <ul class="logo-bloc">
+                <li><a href="index.html"><img src="logo.png" alt="Goldsmiths Corporation Logo" class="logo"></a></li>
+                <li><a>Goldsmiths Corporation</a></li>
+            </ul>
+        </div>
+        <div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html" >About Us</a></li>
+                    <li><a href="invest.html" style="text-decoration: underline;">Invest</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Paste your document content here -->
+        <h2>Executive Overview</h2> 
+        <h3>Seed Stage - 350K GBP</h3> 
+        <p>
+            <b>Introduction & Problem Statement</b>
+            <br>
+            Goldsmiths Corporation Ltd. is a UK-based Seed-Stage start-up specialized in ground-breaking robotic solutions for agriculture, 
+            aiming to become a global pioneer in cost-effective, automated harvesting. We focus on solutions for high value specialty crops 
+            that currently rely on a rapidly diminishing supply of manual labour, and whose persistence and profitability is critical for 
+            future crop diversity and food security. The scarcity of pickers, which has become significant even in developing countries like
+            Colombia, Peru, and Mexico, is further exacerbated by the failure of current academic and industrial robotic projects to provide 
+            cost-effective solutions for agricultural players.
+        </p>
+
+        <p>
+            <b>Proposed Solution</b>
+            <br>
+            We've developed a revolutionary harvesting approach, capable of reducing the fastest research-standard cycle time from 5 seconds
+            per fruit to a projected 0.05 seconds per fruit for tabasco chilli peppers. While rates may vary for different crops, sub-second 
+            harvesting times are readily achievable. Cayenne chilli peppers, for example, can be harvested with a cycle time of 0.2 seconds. 
+            Beyond this technological feat, we have designed a financial model that makes the technology affordable even to farmers in developing 
+            countries, without sacrificing profitability for Goldsmiths. Our analysis indicates that when deployed efficiently, our harvester 
+            could generate savings of up to 25% on picking costs for farmers while under an 65% gross margin leasing scheme. Our technology is
+            highly versatile, capable of harvesting a huge variety of crops, from chillies, to strawberries, to avocados, irrespective of whether 
+            the fruit is ripe or green. One of the biggest strength of our approach is that we can adapt the technology to a new crop in a matter 
+            of days, allowing farmer to adopt the technology with very little overhead.
+        </p>
+
+        <p>
+            <b>Traction</b>
+            <br>
+            The project has completed an 18-Month Pre-Seed Stage of research, idea development, system validation, and component testing under 
+            the founder's MSc Robotics Thesis at King's College London. Over this time we have gathered substantial industry interest and support
+            with Hugo Restrepo y Cia joining the venture as a key shareholder and future client. McIlhenny Company, the manufactures of TABASCO 
+            and one of the largest hot sauce producers in the world, sponsored the necessary equipment, logistics, and components for the Thesis 
+            project, and expressed significant support and enthusiasm for the technology's possibilities, as well as signalling that they would 
+            be interested in investing once the project has produced a working prototype. The design and code for the majority of the system 
+            components has already been completed, significantly de-risking the most challenging aspects of development, and assuring a streamlined 
+            execution of the next stages of the project.
+        </p>
+
+        <p>
+            <b>Seed Stage</b>
+            <br>
+            We are currently looking for <b>GBP 350,000</b> of capital (GBP 250,000 of which have <b>SEIS Advance Assurance</b>) to fund an intensive prototype 
+            development stage. Over 12 months we want to build a semi-autonomous harvester that will enable us to stress-test our approach and models, 
+            and validate the projections we have made with regard to picking speed, technological capacity, and profitability. During this stage we 
+            will onboard a highly skilled and creative individual to take over the AI sector of the company, and further improve the approach and 
+            robustness of the models already developed by the founder.
+        </p>
+
+        <p>
+            <b>Shareholder Team</b>
+            <div class="label">Martin Restrepo:</div>
+            <p class="indented-text">   Martin holds a BEng in Design, Innovation & Creative Engineering from Queen Mary, University of London, and an MSc 
+                                        in Robotics from King's College London. His academic focus in engineering design, materials, manufacturing, 
+                                        computer vision, AI methodologies, and neural network architectures provides the robust technical foundation vital 
+                                        for this project.
+            </p>
+            <div class="label">Hugo Restrepo y Cia:</div>
+            <p class="indented-text">   A family company and the largest producer and exporter of chilli pepper mash from Colombia and Peru, Hugo Restrepo 
+                                        has over 45 years' experience in the business, and currently supplies pepper mash to some of the biggest players 
+                                        in the industry across the world. The company comes with a team of agricultural experts that are critical to the 
+                                        field success of the harvester, as well as a network of clients and growers that play a key role in the early stage 
+                                        'development' market for the company's harvester.
+       
+            </p>
+        </p>
+
+        <p>
+            <b>Business Model and Financial Model</b>
+            <br>
+            Goldsmiths will develop, design, and manufacture robotic solutions for agriculture, and lease them out to farmers, partner companies and 
+            cooperatives under an initial 85% gross margin, beginning with chilli peppers and then diversifying to include other crops around the world. 
+            We anticipate that with further R&D we can halve our manufacturing cost within the first five years the current design, which uses mostly 
+            'off-the-shelf' components, has the following rounded financial setup for Cayenne chilli peppers for 1 machine, over 8 months of harvest season, 
+            based on mixed pricing for Colombian & Mexican bulk product. Crops and markets with premium pricing allow for even greater financial flexibility. <br>
+            <br>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <span>Raw Harvester Build Cost:</span>
+                    <b>80,000 USD</b>
+                </div>
+                <div class="flex-item">
+                    <span>Picking Capacity (at 66% Efficiency):</span>
+                    <b>2,000 Tonnes</b>
+                </div>
+                <div class="flex-item">
+                    <span>Current Yearly Picking Cost:</span>
+                    <b>200,000 USD</b>
+                </div>
+                <div class="flex-item">
+                    <span>Machine Lease:</span>
+                    <b>140,000</b>
+                </div>
+                <div class="flex-item">
+                    <span>Operation Cost:</span>
+                    <b>30,000 USD</b>
+                </div>
+                <div class="flex-item">
+                    <span>Farmer Savings:</span>
+                    <b>30,000 USD</b>
+                </div>
+                <div class="flex-item">
+                    <span>Projected Harvester Lifetime:</span>
+                    <b>5 Years</b>
+                </div>
+                <div class="flex-item">
+                    <span>Total Maintenance Cost:</span>
+                    <b>20,000 USD</b>
+                </div>
+                <div class="flex-item">
+                    <span>Gross Margin per Machine (5 yr.):</span>
+                    <b>600,000 USD</b>
+                </div>
+            </div>
+
+        </p>
+        
+        <p>
+            <b>Market Analysis</b>
+            <br>
+            Through the strategic partnership with Hugo Restrepo y Cia and its client network, Goldsmiths Corporation has access to an initial 
+            'development' market that we know has a pressing need for this solution, and where the warm relationship we have with our clients 
+            and their other growers provides us with a sizeable initial 'development' market of approx. 18 million USD. This value is exclusively 
+            derived from the current picking costs of our immediate network, which is around 140,000 tonnes of various types of chilli pepper. For 
+            the local market alone we would need 75 harvesters, which would give us an annual gross margin of 9 million USD. <br>   
+            <br>
+            Chilli production outside of the local market, including for other uses than sauce, is considered a 'secondary market'. The following 
+            are estimates based on studies and projections by various market research institutions and publications, where the value is based on 
+            a projected growth rate up to 2030. <br>
+            <br>
+            <b>Hot Sauce: </b> $8.5 billion USD @ CAGR 6.5 %  <br>
+            <b>Dried Chilli: </b> $2.3 billion USD @ CAGR 6.11 %  <br>
+            <b>Fresh Chilli: </b> $0.7 billion USD @ CAGR 3.1 %  <br>
+            <b>Chilli Oil: </b> $3.5 billion USD @ CAGR 6.2 % <br>
+            <br>
+            <b>Total: $15 billion USD. </b> The corresponding picking market might be around 5%, which is $750 million USD <br>
+            <br>
+            The global food market, which is estimated at 880 million tonnes of fruit per year, contains many varieties that can be tackled with our 
+            technology, but the development of a concrete penetration strategy for those markets will happen after the current seed stage is completed 
+            and we have established ourselves within our local 'development' market.
+        </p>
+        <p>
+            <b>Road to Market</b>
+            <br>
+            <b>Pre-Seed Stage:</b> &pound;5,000 GBP | 18 months | Proof of Concept and Feasibility Evaluation | COMPLETED<br>
+            <b>Seed Stage:</b> &pound;350,000 GBP | 12 months | Semi-Autonomous Prototype Development | CURRENT STAGE<br>
+            <b>Series A:</b> &pound;2,000,000 GBP | 12 months | Commercial Launch and R&D Reduction of Manufacturing Cost (~ 50%) <br>
+            <b>Series B:</b> &pound;10,000,000 GBP | 24 months | Product Diversification | Cashflow, Equity & Debt Financing<br>
+            <b>Series C:</b> &pound;30,000,000 GBP | 24 months | Global Expansion | Cashflow, Equity & Debt Financing<br>
+           
+        </p>
+        <br>
+        <h3><a href="executive_overview.pdf" style="color: #0b2a0d; text-decoration: none;" download>DOWNLOAD PDF VERSION</a></h3>
+        <br>
+        
+      
+    </main>
+</body>
+</html>
