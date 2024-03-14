@@ -4,7 +4,16 @@
     <title>Goldsmiths Corporation</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.addEventListener('load', function() {
+            document.body.style.opacity = "1"; // Fade in the content
+        });
+    </script>
     <style>
+        body {
+            opacity: 0;
+            transition: opacity 1.5s ease-in;
+        }
         body {
             margin: 0;
             padding: 0;
@@ -53,7 +62,7 @@
             font-size: 3vh; 
             font-family: 'Roboto Condensed', sans-serif; 
             cursor: pointer; /* Cursor pointer to indicate it's clickable */
-            border-radius: 20px; /* Rounded corners */
+            border-radius: 2vh; /* Rounded corners */
             color: #0b2a0d;
         }
         .email-section{
@@ -70,11 +79,31 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+        .tagline-section{
+            color: #7b7b7b; 
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 3vh; /* Adjust font size here */
+            font-weight: 700;
+            text-align: center;
+            line-height: 4vh;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+       
     </style>
 </head>
 <body>
     <div class="text-section">
         <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
+    </div>
+    <div class="tagline-section">
+        <a>
+            WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
+        </a>
     </div>
     <div class="button-section">
         <a href="redacted_deck.pdf" target="_blank">

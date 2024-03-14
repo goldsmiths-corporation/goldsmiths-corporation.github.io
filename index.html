@@ -3,7 +3,41 @@
 <head>
     <title>Goldsmiths Corporation</title> 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        setTimeout(function() {
+            document.body.classList.add('fade-out'); // Start the fade-out effect
+            setTimeout(function() {
+                window.location.href = 'about.html'; // Redirect after the fade-out
+            }, 1000); // This should match the duration of the CSS transition
+        }, 4000); // Adjust this to control how long before the fade-out starts
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the logo link element
+            var logoLink = document.querySelector('.logo-section a');
+            // Override the click event on the logo link
+            logoLink.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                document.body.style.transition = "opacity 0.5s ease-out";
+                document.body.style.opacity = "0"; // Start fade out
+    
+                // Wait for the fade out to finish before redirecting
+                setTimeout(function() {
+                    window.location.href = logoLink.href; // Use the href of the clicked link
+                }, 500); // Match this with the CSS transition time
+            });
+        });
+    </script>  
     <style>
+
+        body {
+            transition: opacity 1s ease-out;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+
+
         body {
             margin: 0;
             padding: 0;
