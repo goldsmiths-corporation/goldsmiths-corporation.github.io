@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Goldsmiths Corporation</title> 
+    <title>Goldsmiths Corporation</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -9,45 +9,84 @@
             margin: 0;
             padding: 0;
             background-color: #0b2a0d;
-            position: relative; 
+            position: relative;
             height: 100vh;
         }
         .text-section {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
         }
         .text-section a {
-            color:  #DEB13C; 
+            color: #DEB13C;
             text-decoration: none;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 2.5vh;
-            font-weight: 100; 
+            font-weight: 100;
             text-align: center;
-     
         }
-        .embed-container {
-            position: relative;
-            width: 60vw; 
-            aspect-ratio: 16 / 9.1; /* adjustment for edge */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%,0); /* Adjust for the size of the element */
+        .text-section h1 {
+            color: #ffb700;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 15vh;
+            font-weight: 900;
             text-align: center;
-            z-index: 11; /* Ensure it's above the iframe */
-        }  
-
+            line-height: 15vh;
+        }
+        .button-section {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .button {
+            background-color:#7b7b7b; /* Gray background */
+            border: none; 
+            padding: 0.5vh 2vh; 
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 3vh; 
+            font-family: 'Roboto Condensed', sans-serif; 
+            cursor: pointer; /* Cursor pointer to indicate it's clickable */
+            border-radius: 20px; /* Rounded corners */
+            color: #0b2a0d;
+        }
+        .email-section{
+            color: #7b7b7b; 
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 3vh; /* Adjust font size here */
+            font-weight: 900;
+            text-align: center;
+            line-height: 4vh;
+            position: absolute;
+            top: 88%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="text-section">
-      <a>
-
-        <iframe class= "embed-container", src="redacted_deck.pdf#toolbar=0&navpanes=0&scrollbar=0&bgcolor=#acacac", style="border:none; background: #acacac;"> </iframe>
-  
-      </a>
+        <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
     </div>
+    <div class="button-section">
+        <a href="redacted_deck.pdf" target="_blank">
+            <button class="button">DOWNLOAD PITCH DECK</button>
+        </a>
+         
+    </div>
+    <div class="email-section">
+        <a href="mailto:martin@goldsmiths.cc" target="_blank">
+            <p class="email-section">@</p>
+        </a>
+    </div>
+    
 </body>
 </html>
