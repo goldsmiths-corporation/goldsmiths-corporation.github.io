@@ -6,27 +6,32 @@
     <title>Goldsmiths Corporation</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script>
         window.addEventListener('load', function() {
             document.body.style.opacity = "1"; // Fade in the content
+            document.body.style.transition = "opacity 1.5s ease-in";
         });
     </script>
     <style>
         body {
             opacity: 0;
             transition: opacity 1.5s ease-in;
+            -webkit-transition: opacity 1.5s ease-in; /* Safari */
             margin: 0;
             padding: 0;
             background-color: #0b2a0d;
             position: relative;
             height: 100vh;
             font-family: 'Roboto Condensed', sans-serif;
+            -webkit-font-smoothing: antialiased; /* Helps with font rendering */
         }
         .text-section {
             position: absolute;
             top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
         .text-section a {
@@ -47,6 +52,7 @@
             top: 77%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
         .button {
@@ -66,6 +72,7 @@
             top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
         .tagline-section {
@@ -76,6 +83,7 @@
             top: 67%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
 
@@ -90,6 +98,7 @@
                 width: 90%;
                 left: 50%;
                 transform: translate(-50%, 0%);
+                -webkit-transform: translate(-50%, 0%);
             }
             .text-section h1 {
                 font-size: 12vw; /* increasing font slightly for better fit */
@@ -102,6 +111,7 @@
                 width: 90%;
                 left: 50%;
                 transform: translate(-50%, 0%);
+                -webkit-transform: translate(-50%, 0%);
             }
             .button-section {
                 top: 60%;
@@ -137,4 +147,4 @@
         </a>
     </div>
 </body>
-</html> 
+</html>
