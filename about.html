@@ -5,34 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goldsmiths Corporation</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;900&display=swap" rel="stylesheet">
     <script>
-        // Function to detect if the user is on a mobile device
-        function isMobile() {
-            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-
-        // Function to detect if the browser is Safari on a desktop/laptop
-        function isDesktopSafari() {
-            // Check for Safari and exclude Chrome, Android, and mobile Safari
-            const ua = navigator.userAgent;
-            const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
-            return isSafari && !isMobile();
-        }
-
         window.addEventListener('load', function() {
-            const isSafariOnDesktop = isDesktopSafari();
-
-            if (isSafariOnDesktop) {
-                // Apply specific content and styles for Safari on desktop
-                document.getElementById('safari-desktop-content').style.display = 'block';
-            } else {
-                // Apply specific content and styles for other devices/browsers
-                document.getElementById('default-content').style.display = 'block';
-            }
-
-            // Fade in the content
-            document.body.style.opacity = "1";
+            document.body.style.opacity = "1"; // Fade in the content
         });
     </script>
     <style>
@@ -42,177 +18,87 @@
             margin: 0;
             padding: 0;
             background-color: #0b2a0d;
-            position: relative;
-            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             font-family: 'Roboto Condensed', sans-serif;
-        }
-
-        /* Default styles for all other browsers and devices */
-        #default-content {
-            display: none;
-        }
-        #default-content .text-section {
-            position: absolute;
-            top: 42%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        #default-content .text-section a {
-            color: #DEB13C;
-            text-decoration: none;
-            font-size: 2.5vh;
-            font-weight: 100;
-        }
-        #default-content .text-section h1 {
-            color: #ffb700;
-            font-size: 15vh;
-            font-weight: 900;
-            line-height: 15vh;
-            margin: 0;
-        }
-        #default-content .button-section {
-            position: absolute;
-            top: 77%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        #default-content .button {
-            background-color: #7b7b7b;
-            border: none;
-            padding: 0.5vh 2vh;
-            font-size: 3vh;
-            cursor: pointer;
-            border-radius: 2vh;
-            color: #0b2a0d;
-        }
-        #default-content .email-section {
             color: #7b7b7b;
-            font-size: 3vh;
-            font-weight: 900;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        #default-content .tagline-section {
-            color: #7b7b7b;
-            font-size: 3vh;
-            font-weight: 700;
-            position: absolute;
-            top: 67%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
         }
 
-        /* Specific styles for Safari on desktop */
-        #safari-desktop-content {
-            display: none;
-        }
-        #safari-desktop-content .text-section {
-            position: absolute;
-            top: 42%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        #safari-desktop-content .text-section a {
-            color: #DEB13C;
-            text-decoration: none;
-            font-size: 2.5vh;
-            font-weight: 100;
-        }
-        #safari-desktop-content .text-section h1 {
+        .text-section h1 {
             color: #ffb700;
-            font-size: 15vh;
+            font-size: 8rem;
             font-weight: 900;
-            line-height: 15vh;
             margin: 0;
+            line-height: 1.2;
         }
-        #safari-desktop-content .button-section {
-            position: absolute;
-            top: 77%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+
+        .tagline-section {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            color: #7b7b7b;
         }
-        #safari-desktop-content .button {
+
+        .button-section {
+            margin: 1.5rem 0;
+        }
+
+        .button {
             background-color: #7b7b7b;
             border: none;
-            padding: 0.5vh 2vh;
-            font-size: 3vh;
-            cursor: pointer;
-            border-radius: 2vh;
-            color: #0b2a0d;
-        }
-        #safari-desktop-content .email-section {
-            color: #7b7b7b;
-            font-size: 3vh;
-            font-weight: 900;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        #safari-desktop-content .tagline-section {
-            color: #7b7b7b;
-            font-size: 3vh;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             font-weight: 700;
-            position: absolute;
-            top: 67%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            color: #0b2a0d;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #9e9e9e;
+        }
+
+        .email-section a {
+            text-decoration: none;
+            color: #7b7b7b;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .text-section h1 {
+                font-size: 4rem;
+            }
+
+            .tagline-section, .button, .email-section a {
+                font-size: 1rem;
+            }
+
+            .button {
+                padding: 0.75rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Default content for non-Safari desktop browsers -->
-    <div id="default-content">
-        <div class="text-section">
-            <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
-        </div>
-        <div class="tagline-section">
-            <a>
-                WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
-            </a>
-        </div>
-        <div class="button-section">
-            <a href="redacted_deck.pdf" target="_blank">
-                <button class="button">DOWNLOAD PITCH DECK</button>
-            </a>
-        </div>
-        <div class="email-section">
-            <a href="mailto:martin@goldsmiths.cc" target="_blank">
-                <p class="email-section">@</p>
-            </a>
-        </div>
+    <div class="text-section">
+        <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
     </div>
-
-    <!-- Content for Safari on desktop -->
-    <div id="safari-desktop-content">
-        <div class="text-section">
-            <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
-        </div>
-        <div class="tagline-section">
-            <a>
-                WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
-            </a>
-        </div>
-        <div class="button-section">
-            <a href="redacted_deck.pdf" target="_blank">
-                <button class="button">DOWNLOAD PITCH DECK</button>
-            </a>
-        </div>
-        <div class="email-section">
-            <a href="mailto:martin@goldsmiths.cc" target="_blank">
-                <p class="email-section">@</p>
-            </a>
-        </div>
+    <div class="tagline-section">
+        WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
+    </div>
+    <div class="button-section">
+        <a href="redacted_deck.pdf" target="_blank">
+            <button class="button">DOWNLOAD PITCH DECK</button>
+        </a>
+    </div>
+    <div class="email-section">
+        <a href="mailto:martin@goldsmiths.cc">@</a>
     </div>
 </body>
 </html>
