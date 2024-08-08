@@ -6,8 +6,72 @@
     <title>Goldsmiths Corporation</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        // Function to detect if the user is on a mobile device
+        function isMobile() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Function to detect if the browser is Safari
+        function isSafari() {
+            return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+
+        window.addEventListener('load', function() {
+            const isMobileDevice = isMobile();
+            const isSafariBrowser = isSafari();
+
+            if (isMobileDevice && isSafariBrowser) {
+                // Inject the second HTML block for Safari on mobile
+                document.body.innerHTML = `
+                    <div class="text-section">
+                        <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
+                    </div>
+                    <div class="tagline-section">
+                        <a>
+                            WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
+                        </a>
+                    </div>
+                    <div class="button-section">
+                        <a href="redacted_deck.pdf" target="_blank">
+                            <button class="button">DOWNLOAD PITCH DECK</button>
+                        </a>
+                    </div>
+                    <div class="email-section">
+                        <a href="mailto:martin@goldsmiths.cc" target="_blank">
+                            <p class="email-section">@</p>
+                        </a>
+                    </div>
+                `;
+            } else {
+                // Inject the first HTML block for other cases
+                document.body.innerHTML = `
+                    <div class="text-section">
+                        <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
+                    </div>
+                    <div class="tagline-section">
+                        <a>
+                            WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
+                        </a>
+                    </div>
+                    <div class="button-section">
+                        <a href="redacted_deck.pdf" target="_blank">
+                            <button class="button">DOWNLOAD PITCH DECK</button>
+                        </a>
+                    </div>
+                    <div class="email-section">
+                        <a href="mailto:martin@goldsmiths.cc" target="_blank">
+                            <p class="email-section">@</p>
+                        </a>
+                    </div>
+                `;
+            }
+
+            // Fade in the content
+            document.body.style.opacity = "1";
+        });
+    </script>
     <style>
-        /* Default styles for all browsers except Safari on desktop */
         body {
             opacity: 0;
             transition: opacity 1.5s ease-in;
@@ -75,7 +139,7 @@
             text-align: center;
         }
 
-        /* Mobile styles */
+        /* introducing unique style for phone */
         @media (max-width: 767px) {
             body {
                 height: auto;
@@ -88,7 +152,7 @@
                 transform: translate(-50%, 0%);
             }
             .text-section h1 {
-                font-size: 12vw;
+                font-size: 12vw; /* increasing font slightly for better fit */
                 line-height: 1.1;
                 word-wrap: break-word;
             }
@@ -111,68 +175,8 @@
                 font-size: 5vw;
             }
         }
-
-        /* Styles for Safari on desktop */
-        .safari-desktop .text-section h1 {
-            font-size: 15vh;
-            line-height: 15vh;
-        }
-        .safari-desktop .tagline-section,
-        .safari-desktop .email-section,
-        .safari-desktop .button-section {
-            position: absolute;
-            transform: translate(-50%, -50%);
-        }
-        .safari-desktop .text-section {
-            top: 42%;
-        }
-        .safari-desktop .tagline-section {
-            top: 67%;
-        }
-        .safari-desktop .button-section {
-            top: 77%;
-        }
-        .safari-desktop .email-section {
-            top: 80%;
-        }
     </style>
-    <script>
-        function isSafariDesktop() {
-            // Detect Safari using the user agent string and check for desktop
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-            const isDesktop = window.innerWidth > 767; // Assuming desktop is greater than 767px
-            return isSafari && isDesktop;
-        }
-
-        window.addEventListener('load', function() {
-            document.body.style.opacity = "1"; // Fade in the content
-
-            // Add a specific class to body if it is Safari on desktop
-            if (isSafariDesktop()) {
-                document.body.classList.add('safari-desktop');
-            }
-        });
-    </script>
 </head>
 <body>
-    <div class="text-section">
-        <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
-    </div>
-    <div class="tagline-section">
-        <a>
-            WE'RE UNLOCKING THE WORLD'S ROBOTIC HARVESTING POTENTIAL
-        </a>
-    </div>
-    <div class="button-section">
-        <a href="redacted_deck.pdf" target="_blank">
-            <button class="button">DOWNLOAD PITCH DECK</button>
-        </a>
-    </div>
-    <div class="email-section">
-        <a href="mailto:martin@goldsmiths.cc" target="_blank">
-            <p class="email-section">@</p>
-        </a>
-    </div>
 </body>
 </html>
