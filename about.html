@@ -4,49 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goldsmiths Corporation</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <script>
-        window.addEventListener('load', function() {
-            document.body.style.opacity = "1"; // Fade in the content
-            document.body.style.transition = "opacity 1.5s ease-in";
-        });
-    </script>
     <style>
         body {
             opacity: 0;
             transition: opacity 1.5s ease-in;
-            -webkit-transition: opacity 1.5s ease-in; /* Safari */
             margin: 0;
             padding: 0;
             background-color: #0b2a0d;
             position: relative;
             height: 100vh;
             font-family: 'Roboto Condensed', sans-serif;
-            -webkit-font-smoothing: antialiased; /* Helps with font rendering */
-            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-            display: -ms-flexbox; /* TWEENER - IE 10 */
-            display: -webkit-flex; /* NEW - Chrome */
-            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-            flex-direction: column;
-            -webkit-flex-direction: column;
         }
         .text-section {
             position: absolute;
             top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            justify-content: center;
-            -webkit-justify-content: center;
         }
         .text-section a {
             color: #DEB13C;
@@ -66,15 +42,7 @@
             top: 77%;
             left: 50%;
             transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            justify-content: center;
-            -webkit-justify-content: center;
         }
         .button {
             background-color: #7b7b7b;
@@ -84,12 +52,6 @@
             cursor: pointer;
             border-radius: 2vh;
             color: #0b2a0d;
-            transition: background-color 0.3s ease;
-            -webkit-transition: background-color 0.3s ease; /* Safari */
-        }
-        .button:hover {
-            background-color: #595959;
-            -webkit-background-color: #595959; /* Safari */
         }
         .email-section {
             color: #7b7b7b;
@@ -99,7 +61,6 @@
             top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
         .tagline-section {
@@ -110,11 +71,10 @@
             top: 67%;
             left: 50%;
             transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
         }
 
-        /* Mobile styles */
+        /* introducing unique styles for phone */
         @media (max-width: 767px) {
             body {
                 height: auto;
@@ -125,10 +85,9 @@
                 width: 90%;
                 left: 50%;
                 transform: translate(-50%, 0%);
-                -webkit-transform: translate(-50%, 0%);
             }
             .text-section h1 {
-                font-size: 12vw; /* Better fit for mobile */
+                font-size: 12vw; /* increasing font slightly for better fit */
                 line-height: 1.1;
                 word-wrap: break-word;
             }
@@ -138,7 +97,6 @@
                 width: 90%;
                 left: 50%;
                 transform: translate(-50%, 0%);
-                -webkit-transform: translate(-50%, 0%);
             }
             .button-section {
                 top: 60%;
@@ -164,7 +122,7 @@
         </a>
     </div>
     <div class="button-section">
-        <a href="/redacted_deck.pdf" target="_blank">
+        <a href="redacted_deck.pdf" target="_blank">
             <button class="button">DOWNLOAD PITCH DECK</button>
         </a>
     </div>
@@ -173,5 +131,27 @@
             <p class="email-section">@</p>
         </a>
     </div>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.style.opacity = "1"; // Fade in the content
+
+            // Detect if the browser is Safari on a desktop
+            function isSafariDesktop() {
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                const isDesktop = window.innerWidth > 767; // Assuming desktop is greater than 767px
+                return isSafari && isDesktop;
+            }
+
+            if (isSafariDesktop()) {
+                // Apply Safari desktop specific styles
+                document.querySelector('.text-section h1').style.fontSize = '13vh';
+                document.querySelector('.text-section').style.top = '40%';
+                document.querySelector('.tagline-section').style.top = '66%';
+                document.querySelector('.button-section').style.top = '75%';
+                document.querySelector('.email-section').style.top = '78%';
+            }
+        });
+    </script>
 </body>
 </html>
