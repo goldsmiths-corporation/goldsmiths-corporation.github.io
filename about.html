@@ -25,6 +25,13 @@
             height: 100vh;
             font-family: 'Roboto Condensed', sans-serif;
             -webkit-font-smoothing: antialiased; /* Helps with font rendering */
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-direction: column;
+            -webkit-flex-direction: column;
         }
         .text-section {
             position: absolute;
@@ -33,6 +40,13 @@
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            -webkit-justify-content: center;
         }
         .text-section a {
             color: #DEB13C;
@@ -54,6 +68,13 @@
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%); /* Safari */
             text-align: center;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            -webkit-justify-content: center;
         }
         .button {
             background-color: #7b7b7b;
@@ -63,6 +84,12 @@
             cursor: pointer;
             border-radius: 2vh;
             color: #0b2a0d;
+            transition: background-color 0.3s ease;
+            -webkit-transition: background-color 0.3s ease; /* Safari */
+        }
+        .button:hover {
+            background-color: #595959;
+            -webkit-background-color: #595959; /* Safari */
         }
         .email-section {
             color: #7b7b7b;
@@ -87,7 +114,7 @@
             text-align: center;
         }
 
-        /* introducing unique style for phone */
+        /* Mobile styles */
         @media (max-width: 767px) {
             body {
                 height: auto;
@@ -101,7 +128,7 @@
                 -webkit-transform: translate(-50%, 0%);
             }
             .text-section h1 {
-                font-size: 12vw; /* increasing font slightly for better fit */
+                font-size: 12vw; /* Better fit for mobile */
                 line-height: 1.1;
                 word-wrap: break-word;
             }
