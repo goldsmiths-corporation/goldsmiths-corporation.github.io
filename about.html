@@ -9,21 +9,23 @@
     <script>
         // Function to detect if the user is on a mobile device
         function isMobile() {
-            return /Mobi|Android/i.test(navigator.userAgent);
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
         }
 
-        // Function to detect if the browser is Safari
-        function isSafari() {
-            return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        // Function to detect if the browser is Safari on a desktop/laptop
+        function isDesktopSafari() {
+            // Check for Safari and exclude Chrome, Android, and mobile Safari
+            const ua = navigator.userAgent;
+            const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
+            return isSafari && !isMobile();
         }
 
         window.addEventListener('load', function() {
-            const isMobileDevice = isMobile();
-            const isSafariBrowser = isSafari();
+            const isSafariOnDesktop = isDesktopSafari();
 
-            if (isMobileDevice && isSafariBrowser) {
-                // Apply specific content and styles for Safari on mobile
-                document.getElementById('safari-mobile-content').style.display = 'block';
+            if (isSafariOnDesktop) {
+                // Apply specific content and styles for Safari on desktop
+                document.getElementById('safari-desktop-content').style.display = 'block';
             } else {
                 // Apply specific content and styles for other devices/browsers
                 document.getElementById('default-content').style.display = 'block';
@@ -105,75 +107,39 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
-        /* introducing unique style for phone */
-        @media (max-width: 767px) {
-            #default-content body {
-                height: auto;
-                min-height: 100vh;
-            }
-            #default-content .text-section {
-                top: 15%;
-                width: 90%;
-                left: 50%;
-                transform: translate(-50%, 0%);
-            }
-            #default-content .text-section h1 {
-                font-size: 12vw; /* increasing font slightly for better fit */
-                line-height: 1.1;
-                word-wrap: break-word;
-            }
-            #default-content .tagline-section {
-                top: 45%;
-                font-size: 4.5vw;
-                width: 90%;
-                left: 50%;
-                transform: translate(-50%, 0%);
-            }
-            #default-content .button-section {
-                top: 60%;
-            }
-            #default-content .button {
-                font-size: 4.5vw;
-                padding: 1vh 3vh;
-            }
-            #default-content .email-section {
-                top: 70%;
-                font-size: 5vw;
-            }
-        }
 
-        /* Specific styles for Safari on mobile */
-        #safari-mobile-content {
+        /* Specific styles for Safari on desktop */
+        #safari-desktop-content {
             display: none;
         }
-        #safari-mobile-content .text-section {
+        #safari-desktop-content .text-section {
             position: absolute;
             top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
-        #safari-mobile-content .text-section a {
+        #safari-desktop-content .text-section a {
             color: #DEB13C;
             text-decoration: none;
             font-size: 2.5vh;
             font-weight: 100;
         }
-        #safari-mobile-content .text-section h1 {
+        #safari-desktop-content .text-section h1 {
             color: #ffb700;
             font-size: 15vh;
             font-weight: 900;
             line-height: 15vh;
             margin: 0;
         }
-        #safari-mobile-content .button-section {
+        #safari-desktop-content .button-section {
             position: absolute;
             top: 77%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
-        #safari-mobile-content .button {
+        #safari-desktop-content .button {
             background-color: #7b7b7b;
             border: none;
             padding: 0.5vh 2vh;
@@ -182,7 +148,7 @@
             border-radius: 2vh;
             color: #0b2a0d;
         }
-        #safari-mobile-content .email-section {
+        #safari-desktop-content .email-section {
             color: #7b7b7b;
             font-size: 3vh;
             font-weight: 900;
@@ -192,7 +158,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
-        #safari-mobile-content .tagline-section {
+        #safari-desktop-content .tagline-section {
             color: #7b7b7b;
             font-size: 3vh;
             font-weight: 700;
@@ -205,7 +171,7 @@
     </style>
 </head>
 <body>
-    <!-- Default content for non-Safari mobile browsers -->
+    <!-- Default content for non-Safari desktop browsers -->
     <div id="default-content">
         <div class="text-section">
             <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
@@ -227,8 +193,8 @@
         </div>
     </div>
 
-    <!-- Content for Safari on mobile -->
-    <div id="safari-mobile-content">
+    <!-- Content for Safari on desktop -->
+    <div id="safari-desktop-content">
         <div class="text-section">
             <h1>FASTER <br>CHEAPER <br> EVERYWHERE</h1>
         </div>
